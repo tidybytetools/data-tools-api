@@ -1,0 +1,8 @@
+fastapi>=0.115,<1
+uvicorn[standard]>=0.32,<1
+python-multipart>=0.0.9
+pdf-table-pull-lite==1.3.1
+doc2md-lite==1.2.2
+link-check-lite==1.1.4
+md-chunk-lite==1.1.1
+json-shaper-lite==1.1.1

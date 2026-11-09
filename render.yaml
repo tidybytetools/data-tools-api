@@ -1,0 +1,14 @@
+# Blueprint for a Render free web service.
+# The RAPIDAPI_PROXY_SECRET value is set later in the dashboard,
+# after Rapid Studio shows the proxy secret.
+services:
+  - type: web
+    name: tidybyte-data-tools-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: RAPIDAPI_PROXY_SECRET
+        sync: false
